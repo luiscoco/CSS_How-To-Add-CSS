@@ -87,3 +87,28 @@ To use inline styles, add the style attribute to the relevant element. The style
   </body>
 </html>
 ```
+
+## 4. Multiple Style Sheets
+
+If some properties have been defined for the same selector (element) in different style sheets, the **value from the last read style sheet will be used**. 
+
+If the internal style is defined after the link to the external style sheet, the <h1> elements will be "orange":
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+    h1 {
+      color: orange;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>The style of this document is a combination of an external stylesheet, and internal style</p>
+  </body>
+</html>
+```
+
